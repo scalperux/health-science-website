@@ -19,12 +19,12 @@
                 <span style="display: block; width: 24px; height: 2px; background: white; margin: 4px 0; transition: all 0.3s ease;"></span>
                 <span style="display: block; width: 24px; height: 2px; background: white; margin: 4px 0; transition: all 0.3s ease;"></span>
             </button>
-            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 2rem; flex-wrap: wrap;" role="menubar">
-                <li role="none"><a href="index.html" style="color: white; text-decoration: none; padding: 0.5rem; transition: all 0.3s ease; border-bottom: 2px solid transparent;" role="menuitem">Home</a></li>
-                <li role="none"><a href="choosing-the-major.html" style="color: white; text-decoration: none; padding: 0.5rem; transition: all 0.3s ease; border-bottom: 2px solid white; font-weight: 500;" role="menuitem" aria-current="page">Why Choose</a></li>
-                <li role="none"><a href="major-pathway.html" style="color: white; text-decoration: none; padding: 0.5rem; transition: all 0.3s ease; border-bottom: 2px solid transparent;" role="menuitem">Pathway</a></li>
-                <li role="none"><a href="career-outlook.html" style="color: white; text-decoration: none; padding: 0.5rem; transition: all 0.3s ease; border-bottom: 2px solid transparent;" role="menuitem">Careers</a></li>
-                <li role="none"><a href="advanced-degrees.html" style="color: white; text-decoration: none; padding: 0.5rem; transition: all 0.3s ease; border-bottom: 2px solid transparent;" role="menuitem">Advanced Degrees</a></li>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; flex-wrap: wrap;" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" style="color: white; text-decoration: none; padding: 0.6rem 1.2rem; transition: all 0.3s ease; background: rgba(255,255,255,0.1); border-radius: 50px; display: flex; align-items: center; gap: 0.5rem;" role="menuitem">Home</a></li>
+                <li role="none"><a href="choosing-the-major.html" class="nav-link active" style="color: white; text-decoration: none; padding: 0.6rem 1.2rem; transition: all 0.3s ease; background: rgba(255,255,255,0.25); border-radius: 50px; display: flex; align-items: center; gap: 0.5rem; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" role="menuitem" aria-current="page">Why Choose</a></li>
+                <li role="none"><a href="major-pathway.html" class="nav-link" style="color: white; text-decoration: none; padding: 0.6rem 1.2rem; transition: all 0.3s ease; background: rgba(255,255,255,0.1); border-radius: 50px; display: flex; align-items: center; gap: 0.5rem;" role="menuitem">Pathway</a></li>
+                <li role="none"><a href="career-outlook.html" class="nav-link" style="color: white; text-decoration: none; padding: 0.6rem 1.2rem; transition: all 0.3s ease; background: rgba(255,255,255,0.1); border-radius: 50px; display: flex; align-items: center; gap: 0.5rem;" role="menuitem">Careers</a></li>
+                <li role="none"><a href="advanced-degrees.html" class="nav-link" style="color: white; text-decoration: none; padding: 0.6rem 1.2rem; transition: all 0.3s ease; background: rgba(255,255,255,0.1); border-radius: 50px; display: flex; align-items: center; gap: 0.5rem;" role="menuitem">Advanced Degrees</a></li>
             </ul>
         </div>
     </nav>
@@ -36,12 +36,12 @@
             <h3 id="interests-heading" style="color: #2C7A7B; margin-bottom: 1.5rem; font-size: clamp(1.5rem, 3vw, 2rem);">Personal Interests That Align with Health Science</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 2rem;">
                 <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: all 0.3s ease;" tabindex="0">
-                    <i class="fas fa-heart" style="font-size: 2rem; color: #2C7A7B; margin-bottom: 1rem; display: block; animation: pulse 2s infinite;"></i>
+                    <i class="fas fa-heart icon-animate" style="font-size: 2rem; color: #2C7A7B; margin-bottom: 1rem; display: block; animation: pulse 2s infinite;" aria-hidden="true"></i>
                     <h4 style="color: #2C7A7B; margin-bottom: 1rem; font-size: 1.5rem;">Passion for Helping Others</h4>
                     <p style="color: #4A5568; line-height: 1.8;">If you have a natural inclination to help and care for others, Health Science provides the perfect platform to make a meaningful difference in people's lives.</p>
                 </div>
                 <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: all 0.3s ease;" tabindex="0">
-                    <i class="fas fa-microscope" style="font-size: 2rem; color: #2C7A7B; margin-bottom: 1rem; display: block; animation: bounce 2s infinite;"></i>
+                    <i class="fas fa-microscope icon-animate" style="font-size: 2rem; color: #2C7A7B; margin-bottom: 1rem; display: block; animation: float 2s infinite;" aria-hidden="true"></i>
                     <h4 style="color: #2C7A7B; margin-bottom: 1rem; font-size: 1.5rem;">Interest in Science</h4>
                     <p style="color: #4A5568; line-height: 1.8;">A curiosity about how the human body works and a love for biology, chemistry, and other sciences makes Health Science an engaging field of study.</p>
                 </div>
@@ -133,30 +133,84 @@
             }
         }
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 0 rgba(44, 122, 123, 0));
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 10px rgba(44, 122, 123, 0.3));
+            }
+            100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 0 rgba(44, 122, 123, 0));
+            }
         }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0);
+                filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+            }
+            50% { 
+                transform: translateY(-5px);
+                filter: drop-shadow(0 8px 8px rgba(0,0,0,0.2));
+            }
         }
         @keyframes slideRight {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(10px); }
-            100% { transform: translateX(0); }
+            0% { 
+                transform: translateX(0);
+                filter: brightness(1);
+            }
+            50% { 
+                transform: translateX(10px);
+                filter: brightness(1.2);
+            }
+            100% { 
+                transform: translateX(0);
+                filter: brightness(1);
+            }
         }
         @keyframes tilt {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
-            100% { transform: rotate(0deg); }
+            0% { 
+                transform: rotate(0deg);
+                filter: drop-shadow(0 0 0 rgba(44, 122, 123, 0));
+            }
+            25% { 
+                transform: rotate(5deg);
+                filter: drop-shadow(2px 4px 6px rgba(44, 122, 123, 0.3));
+            }
+            75% { 
+                transform: rotate(-5deg);
+                filter: drop-shadow(-2px 4px 6px rgba(44, 122, 123, 0.3));
+            }
+            100% { 
+                transform: rotate(0deg);
+                filter: drop-shadow(0 0 0 rgba(44, 122, 123, 0));
+            }
         }
+
+        .icon-animate {
+            transition: all 0.3s ease;
+            will-change: transform, filter;
+        }
+
+        .icon-animate:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 4px 6px rgba(44, 122, 123, 0.3));
+        }
+
+        /* Ensure smooth animations */
+        .fas {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 width: 100%;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
                 display: none;
             }
             nav ul.active {
@@ -170,6 +224,10 @@
             }
             h3 {
                 font-size: 1.5rem !important;
+            }
+            .nav-link {
+                width: 100%;
+                justify-content: center;
             }
         }
         @media (max-width: 480px) {
@@ -186,6 +244,10 @@
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
+            }
+            .icon-animate:hover {
+                transform: none;
+                filter: none;
             }
         }
         div:hover {
@@ -205,6 +267,66 @@
         *:focus {
             outline: 3px solid #4299E1;
             outline-offset: 2px;
+        }
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+            font-weight: 500;
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link:hover:before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .nav-link.active:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes navPulse {
+            0% {
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transform: translateY(-2px);
+            }
+            50% {
+                box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+                transform: translateY(-4px);
+            }
+            100% {
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                transform: translateY(-2px);
+            }
+        }
+        
+        .nav-link.active {
+            animation: navPulse 3s infinite;
         }
     </style>
 
